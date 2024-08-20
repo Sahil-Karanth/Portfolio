@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/public/css/style.public/css" rel="stylesheet" type="text/public/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/public/css/bootstrap.min.public/css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Sahil Karanth</title>
+</head>
+<body>
+    
+    <!-- adding navbar -->
+    <object type="text/html" data="navbar.html" class="navbar"></object>
+
+
+    <div class="container">
+
+        <h1>
+            School Absence Emailing
+            <img src="public/images/email-verification-icon.png" alt="email" style="width: 50px; height: 50px; margin-left: 10px; margin-bottom: 10px;">
+        </h1>
+
+        <p>
+            In this project, I created an ergonomic web app to send standardised music lesson absence emails to teachers in my school.
+
+            Users registered an email with the service and could then fill out a form to send an email to the relevant teacher.
+            
+            I felt that client side rendering like with React.js added too significant an overhead for this project so opted for server-side rendering instead with express.js. However, I did use EJS to add dynamic functionality to the site and where appropriate, used AJAX requests to prevent a forced refresh. MongoDB was used to store teacher and session information. I also used electron.js to create a desktop app port of the website.
+        </p>
+
+        <p>
+            User Features:
+        </p>
+
+        <ul>
+            <li>Register an email with the service</li>
+            <li>Send an email to a teacher</li>
+            <li>Administrate the service from the webapp if authorised</li>
+            <li>Use a desktop variant</li>
+        </ul>
+
+        <p>Technical Features:</p>
+
+        <ul>
+            <li>Express.js</li>
+            <li>EJS</li>
+            <li>MongoDB</li>
+            <li>Electron.js</li>
+            <li>Encryption and hashing</li>
+        </ul>
+
+        <p>A project testing video can be found below.</p>
+
+        <a href="https://github.com/1paleking1/PerseMusicEmailing" target="_blank" rel="noopener noreferrer">
+            <button type="button" class="btn btn-link" style="margin-bottom: 16px;">View on GitHub</button>
+        </a>
+
+        <h2>Demonstration Video</h2>
+
+        <video width="100%" height="100%" controls>
+            <source src="public/videos/emailing_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+    </div>
+
+
+    <!-- adding js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

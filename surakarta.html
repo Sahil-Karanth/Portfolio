@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/public/css/style.public/css" rel="stylesheet" type="text/public/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/public/css/bootstrap.min.public/css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Sahil Karanth</title>
+</head>
+<body>
+    
+    <!-- adding navbar -->
+    <object type="text/html" data="navbar.html" class="navbar"></object>
+
+    <div class="container">
+
+        <h1>
+            Surakarta
+            <img src="public/images/red-circle-icon.png" alt="surakarta" style="width: 50px; height: 50px; margin-left: 10px; margin-bottom: 10px;">
+        </h1>
+
+        <p>
+            In this project, I used python to create the ancient Indonesian board game "Surakarta". There are very few digital versions of the game so I created a version that brought together features scattered between different versions and implemented new functionality too.
+        </p>
+
+        <p>
+            One of the most complex parts of the project was designing and implementing an algorithm to determine  the legality of a capturing move because of the game's unique "piece skating" mechanic.  My algorithm used doubly-ended circular lists to store the board's looped tracks.
+        </p>
+
+        <p>
+            I also created a variable difficulty AI opponent using the Monte Carlo Tree Search algorithm which I found to outperform minimax due to the game's very high branching factor.
+        </p>
+
+
+        <p>
+            User Features:
+        </p>
+
+        <ul>
+            <li>Local play</li>
+            <li>AI play (3 difficulties)</li>
+            <li>Accounts for game history, stats and customisation</li>
+            <li>Undoing moves</li>
+            <li>Saving matches</li>
+        </ul>
+
+        <p>Technical Features:</p>
+
+        <ul>
+            <li>Complex OOP model</li>
+            <li>Stacks, circular lists, trees</li>
+            <li>MCTS AI player</li>
+            <li>Greedy AI player</li>
+            <li>Move legality algorithm</li>
+            <li>SQL</li>
+        </ul>
+
+        <p>You can find my full project report below which scored 74/75 at A-level.</p>
+
+        <a href="https://github.com/1paleking1/Surakarta-NEA" target="_blank" rel="noopener noreferrer">
+            <button type="button" class="btn btn-link" style="margin-bottom: 16px;">View on GitHub</button>
+        </a>
+
+        <h2>Screenshots</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <img src="public/images/surakarta_home.png" class="img-fluid" alt="Surakarta Screenshot 1">
+            </div>
+            <div class="col-md-6">
+                <img src="public/images/surakarta_in_game.png" class="img-fluid" alt="Surakarta Screenshot 2">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <img src="public/images/surakarta_mode.png" class="img-fluid" alt="Surakarta Screenshot 3">
+            </div>
+            <div class="col-md-6">
+                <img src="public/images/surakarta_load.png" class="img-fluid" alt="Surakarta Screenshot 4">
+            </div>
+        </div>
+
+        <h2>Project Report</h2>
+
+        <embed class="pdf-container" src="public/pdfs/surakarta_pdf.pdf" type="application/pdf" width="100%" height="1100px" />
+
+    </div>
+
+
+    <!-- adding js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
