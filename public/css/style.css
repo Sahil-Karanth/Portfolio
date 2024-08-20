@@ -25,6 +25,7 @@ h2 {
 .dropdown-item {
     white-space: normal;
     overflow-wrap: break-word;
+    max-width: 300px;
 }
 /* 
 .dropdown-menu {
