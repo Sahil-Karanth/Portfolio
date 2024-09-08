@@ -9,11 +9,6 @@
 </head>
 <body>
     
-    <!-- adding navbar -->
-
-
-
-
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <a class="navbar-brand white" href="#">Sahil Karanth</a>
         <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,6 +51,9 @@
             In this project, I created a plant watering system with a companion app to control the system. The app and Raspberry Pi communicate using a firebase realtime database by "pinging" each other through certain nodes and listening to response nodes. Using firebase enables this system to be controlled securely from anywhere in the world. A Raspberry Pi was used to control a solenoid water valve which lets water flow through pneumatic tubing to a series of plants. If you wish to replicate this project yourself, I have provided a list of equipment, setup images and the app and Pi source code.
         </p>
 
+        <p>
+            This is system is being used my family to water a series of plants when we're abroad.
+        </p>
         
         <p>
             User Features:
@@ -86,13 +84,14 @@
 
         <p>Sorry for the bad video quality!</p>
 
-        <div class="video-container">
-            <video controls>
+        
+        <div class="video-container row d-flex justify-content-center">
+            <video controls class="horizontal-video">
                 <source src="public/videos/app_working_video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
     
-            <video controls>
+            <video controls class="vertical-video">
                 <source src="public/videos/watering_video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -185,8 +184,6 @@
         </ul>
 
     </div>
-
-
 
 
     <!-- adding js -->
