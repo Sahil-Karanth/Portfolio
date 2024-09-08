@@ -37,10 +37,8 @@ h2 {
 }
 
 .vertical-video {
-    /* shrink the video but maintain aspect ratio */
     width: auto !important;
-    max-width: 60% !important;
-    height: auto !important;
+    height: 40% !important;
 }
 
 /* .dropdown-item {
