@@ -85,18 +85,33 @@
         <p>Sorry for the bad video quality!</p>
 
         
-        <div class="video-container row d-flex justify-content-center">
-            <video controls class="horizontal-video">
+        <!-- <div class="video-container row d-flex justify-content-center">
+            <video controls>
                 <source src="public/videos/app_working_video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
     
-            <video controls class="vertical-video" height="300">
+            <video controls>
                 <source src="public/videos/watering_video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-        </div>
+        </div> -->
 
+        <div class="row align-items-center">
+            <div class="d-flex justify-content-center align-items-center col-md-6">
+                <video width="40%" controls>
+                    <source src="public/videos/watering_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        
+            <div class="d-flex justify-content-center align-items-center col-md-6 mt-2">
+                <video width="100%" controls>
+                    <source src="public/videos/app_working_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
 
         <h2>Electronics Setup</h2>
 
