@@ -37,8 +37,9 @@ h2 {
 }
 
 .vertical-video {
-    width: 60% !important;
-    height: auto !important;
+    width: auto !important; /* Maintain aspect ratio */
+    height: 80vh !important; /* Adjust height as needed */
+    max-width: 100% !important; /* Prevent overflow */
 }
 
 /* .dropdown-item {
