@@ -38,11 +38,7 @@ h3 {
 }
 
 .language-section {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 20px !important;
-  margin-top: 20px !important;
+  padding: 20px !important;
 }
 
 /* .dropdown-item {
