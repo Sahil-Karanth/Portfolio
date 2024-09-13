@@ -9,6 +9,12 @@ h2 {
   margin-bottom: 20px !important;
 }
 
+/* make h3 center aligned */
+
+h3 {
+  text-align: center !important;
+}
+
 .white {
   color: white !important;
 }
