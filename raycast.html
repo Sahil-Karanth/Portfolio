@@ -149,10 +149,104 @@
         </h1>
 
         <p>
-            (Will populate this page when I get time)
-
-            Project now finished! Zip file available for download on GitHub and code is there too!
+            This project is a physics light simulation which can be used to teach the properties of light in GCSE physics lessons. Collisions were detected with an incremental raycasting algorithm which I implemented and adapted from the normal approach with a 'retracing' step. This algorithm along with other vector and matrix rotations were used to make the collision system - Pygame was only used for drawing graphics. 
         </p>
+
+        <p>
+          Drawn on reflection/refraction blocks are referred to as 'cells' and are stored in a 2D matrix.
+        </p>
+
+        <p>
+          This was a more technical project, with lots of time spent on paper coming up with required algorithms such as determining if a ray hit a horizontal or vertical wall and the 'retracing' idea.
+        </p>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <p>
+              User Features:
+            </p>
+        
+            <ul>
+              <li>Movable light source which tracks the mouse</li>
+              <li>Reflection Mode</li>  
+              <li>Refraction Mode with total internal reflection</li>
+              <li>Blocks to refract/reflect through can be drawn on and connected</li>
+              <li>Variable:</li>
+              <ul>
+                <li>Number of light rays</li>
+                <li>Angle of light spread</li>
+                <li>Decay of light intensity</li>
+                <li>Number of reflections</li>
+                <li>Material refractive index</li>
+              </ul>
+            </ul>
+        
+            <p>
+              Technical Features:
+            </p>
+        
+            <ul>
+              <li>Raycasting</li>
+              <li>Vectors and matrices</li>
+              <li>Logic</li>
+              <li>Pygame</li>
+            </ul>
+          </div>
+        
+          <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <img src="public/images/light_settings_window.png" class="img-fluid mx-auto" alt="settings_window" style="height: 400px;">
+          </div>
+        </div>
+        
+        <p></p>
+
+        <a href="https://github.com/Sahil-Karanth/Light-Simulation" target="_blank" rel="noopener noreferrer">
+          <button type="button" class="btn btn-link">View on GitHub</button>
+        </a>
+
+        <h2>Raycasting Algorithm</h2>
+
+        <p>Initially I implemented the Digital Differential Analyzer (DDA) algorithm with my system. While it was very efficient, the hit detection was not precise enough for accurate simulation so I switched to using an increment vector approach where I extended a ray in small increments until it detected a hit against the map matrix and while this was very precise, detecting whether a hit surface was horizontal or vertical on the point between two cells reliably required a very small increment so the system became very laggy. To compensate for this I determined that a change in both x and y coordinates from the previous increment to the one which resulted in a hit indicated that a cell edge had been hit. At this point, I undo one increment of the trace and decrease the increment vector by a factor of 100 before continuing the trace. This method is significantly more efficient than a fixed increment vector.</p>
+
+        <h2>Reflection Mode</h2>
+
+        <p>These three images demonstrate the reflection mode. The third image is reflection mode with a max reflection number of zero which serves as a neat explanation of shadows for younger children.</p>
+
+        <div class="row">
+          <div class="col-md-4">
+              <img src="public/images/reflection_img_1.png" class="img-fluid" alt="reflection_img_1">
+          </div>
+          <div class="col-md-4">
+              <img src="public/images/reflection_img_2.png" class="img-fluid" alt="reflection_img_2">
+          </div>
+          <div class="col-md-4">
+              <img src="public/images/shadow_img_2.png" class="img-fluid" alt="shadow_img_2">
+          </div>
+        </div>
+
+        <h2>Refraction Mode</h2>
+
+        <p>These four images demonstrate the refraction mode. The left two images show how the simulation can be used to explain the principle of optic fibres. And the bottom right image shows that you can get some pretty cool looking paths traced!</p>
+
+        <div class="row">
+          <div class="col-md-6">
+              <img src="public/images/refraction_img_1.png" class="img-fluid" alt="refraction_img_1">
+          </div>
+          <div class="col-md-6">
+              <img src="public/images/refraction_img_2.png" class="img-fluid" alt="refraction_img_2">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+              <img src="public/images/refraction_img_3.png" class="img-fluid" alt="refraction_img_3">
+          </div>
+          <div class="col-md-6">
+              <img src="public/images/refraction_img_4.png" class="img-fluid" alt="refraction_img_4">
+          </div>
+        </div>
+
+        
 
 
     <!-- adding js -->
