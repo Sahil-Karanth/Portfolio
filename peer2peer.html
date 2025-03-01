@@ -37,107 +37,6 @@
           <li class="nav-item">
             <a class="nav-link white" href="CV.html">CV</a>
           </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle white"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Coding Projects
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="email.html"
-                >2022 - School Emailing
-                <img
-                  src="public/images/email-verification-icon.png"
-                  alt="email"
-                  style="
-                    width: 40px;
-                    height: 40px;
-                    margin-left: 10px;
-                    margin-bottom: 10px;
-                    margin-top: 10px;
-                  "
-              /></a>
-              <a class="dropdown-item" href="lstm.html"
-                >2022/3 - Basketball Prediction
-                <img
-                  src="public/images/ball-basketball-icon.png"
-                  alt="basketball"
-                  style="
-                    width: 40px;
-                    height: 40px;
-                    margin-left: 10px;
-                    margin-bottom: 10px;
-                    margin-top: 10px;
-                  "
-              /></a>
-              <a class="dropdown-item" href="surakarta.html"
-                >2023/4 - Surakarta
-                <img
-                  src="public/images/red-circle-icon.png"
-                  alt="surakarta"
-                  style="
-                    width: 40px;
-                    height: 40px;
-                    margin-left: 10px;
-                    margin-bottom: 10px;
-                    margin-top: 10px;
-                  "
-              /></a>
-              <a class="dropdown-item" href="fridge.html"
-                >2024 - Fridge App
-                <img
-                  src="public/images/fridge_icon.png"
-                  alt="fridge"
-                  style="
-                    width: 40px;
-                    height: 40px;
-                    margin-left: 10px;
-                    margin-bottom: 10px;
-                    margin-top: 10px;
-                  "
-              /></a>
-              <a class="dropdown-item" href="plant.html"
-                >2024 - Plant Watering
-                <img
-                  src="public/images/green-leaf-icon.png"
-                  alt="plant"
-                  style="
-                    width: 40px;
-                    height: 40px;
-                    margin-left: 10px;
-                    margin-bottom: 10px;
-                    margin-top: 10px;
-                  "
-              /></a>
-
-              <a class="dropdown-item" href="raycast.html"
-                >2024 - Light Simulation
-                <img
-                  src="public/images/light-bulb-color-icon.png"
-                  alt="light"
-                  style="
-                    width: 40px;
-                    height: 40px;
-                    margin-left: 10px;
-                    margin-bottom: 10px;
-                    margin-top: 10px;
-                  "
-              /></a>
-
-
-
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="mini_projects.html"
-                >Other Projects (3)</a
-              >
-            </div>
-          </li>
         </ul>
       </div>
     </nav>
@@ -145,17 +44,60 @@
     <div class="container">
 
         <h1>
-            Distributed Database
+            Decentralised Database
 
             <img src="public/images/distribute-icon.png" alt="file" style="width: 50px; height: 50px; margin-left: 10px; margin-bottom: 10px;">
 
         </h1>
 
+        <p>DEMO VIDEO + PICTURES TO BE ADDED</p>
 
         <p>
-            Will write when I get time :)
+          This was a group project with two of my friends at Eth Oxford 2025.
         </p>
 
+        <p>
+          We took on the Decentralized Memory Organ bounty for the Torus Network. Our peer-to-peer distributed database is fault-tolerant, eliminating single points of failure by allowing client code to connect to any available node. Failed nodes are deprioritised, ensuring continuous operation, while horizontal scalability is easily achieved by adding more peers to the network. Our system features a decentralized peer-to-peer architecture, a custom query language supporting CRUD operations, a secure API for network access, a tamper-proof design through encryption, and an asymmetric encryption system for authentication working for both humans (through an Electron.js UI) and bots.
+        </p>
+
+        <p>
+          Specifically, I built:
+        </p>
+
+        <ul>
+          <li>the whole frontend</li>
+          <li>
+            the whole asymmetric encryption and digital signature authentication system for humans and bots
+          </li>
+          <li>the Express.js servers and their networking that run Gun.js instances on each node and enabled nodes to communicate with each other</li>
+          <li>the fault tolerant system which tries different nodes and deprioritises failed nodes</li>
+          <li>the alpha test firebase JWT authentication</li>
+        </ul>
+
+        <p>My teamates built the custom query language, the bash script that runs all of my servers and the encryption of data whithin the database. We planned the project at the start together and worked on the initial Gun.js setup together.</p>
+
+        <p>
+          User Features:
+        </p>
+      
+      <ul>
+          <li>Setup a local test peer to peer network </li>
+          <li>Write queries in a custom query language</li>
+          <li>Stress test the network over a variety of node counts (horisontal scaling), node edges and failure probabilities</li>
+          <li>Persist a variety of user data in JSON object format</li>
+      </ul>
+      
+      <p>
+          Technical Features:
+      </p>
+      
+      <ul>
+          <li>Asymmetric Encryption auth and data storage</li>
+          <li>Gun.js</li>
+          <li>Express.js</li>
+          <li>Electron.js</li>
+          <li>Firebase and JWT (used in alpha version before making a truly decentralised system)</li>
+      </ul>
         
         <a href="https://github.com/Sahil-Karanth/OxfordEth2025" target="_blank" rel="noopener noreferrer">
             <button type="button" class="btn btn-link">View on GitHub</button>
