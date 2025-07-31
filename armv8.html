@@ -48,8 +48,126 @@
             This was my C group project for year 1 of Computing at Imperial. We wrote an assembler and emulator from scratch in C for a subset of the armv8 instruction set so that we could execute assembly on a raspberry pi.
         
             Each group then chooses any extension to this project, and we chose to build a compressor/decompressor for these assembly files using a custom templating algorithm.
+        
+            I'm going to start by going through our extension, followed by a little bit about our emulator and assembler.
         </p>
         
+        <h2>Compressing Armv8 Assembly Files</h2>
+        
+        <p>
+            For our extension, we wrote a compressor/decompressor between armv8 assembly files and our own .acs (arm compressed source) files. After trying mutliple compression methods,
+            we landed on a templating approach, creating reusable templates in place of instructions. We did the initial programming as well as all the planning and algorithm design together as
+            a group.
+        </p>
+
+        <p>Specifically, I was responsible for:</p>
+
+        <ul>
+            <li>pair programming the whole decompressor</li>
+            <li>pair programming the first compressor step to sort assembly lines into a template groups hashmap</li>
+            <li>pair programming the decompressor output logic</li>
+            <li>solo programming the entire test suite and debug system</li>
+        </ul>
+
+        <p>
+            To determine the templates for a file, we populate an opcode group table hashmap that maps to arrays of instructions that will all belong to a single template category.
+            Categories are not simply the opcode but rather instructions we saw common operands between when doing experiments. For instance, load unconditional (ldrun) and movz instruction
+            with a shift are grouped together. We found being more specific than just opcode led to better results. 
+        </p>
+
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <img src="public/images/compressor_group_table.png" class="img-fluid" alt="assembler Image 1">
+            </div>
+        </div>
+
+        <p></p>
+
+        <p>
+            Once the categories have been determined, we perform a frequency analysis on each parameter in the instruction category, determining the most common value and "baking" this into
+            our template. We determined a threshold for the number of times a potential template will be used in a file to determine whether we create it or not in order to balance
+            the added file size from template metadata.
+        </p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <img src="public/images/compressor_freq_analysis.png" class="img-fluid" alt="assembler Image 1">
+            </div>
+            <div class="col-md-6">
+                <img src="public/images/compressor_freq_analysis_template.png" class="img-fluid" alt="assembler Image 2">
+            </div>
+        </div>
+
+        <p></p>
+
+        <p>
+            Templates are then used to replace lines in the main file, with opcode being replaced with a smaller template id and operand values taking an asterisk to indicate the template's
+            default value or other values to override the template operand. We also compress labels to a smaller string while still being lossless.  In the acs file below,
+            T7 indicates seven templatesa nd L5 indicates five label name replacements.
+        </p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <img src="public/images/compressor_template_usage.png" class="img-fluid" alt="assembler Image 1">
+            </div>
+            <div class="col-md-6">
+                <img src="public/images/compressor_acs_file.png" class="img-fluid" alt="assembler Image 2">
+            </div>
+        </div>
+
+        <p></p>
+
+        <h3>Results and Improvements</h3>
+
+        <p>We saw some great compression on many files in our test suite, with a peak compression of 48%. We found that even files with fewer repeating operands had great
+            compression from the label and template group id substitutions alone. However to improve compression further, we would look at templating whole blocks of repeated structures.
+            We would also compress whole assembly projects by determining templates on a subset of project files and using these for all files (like "training data").
+        </p>
+
+        <div class="row">
+            <div class="col-md-12">
+                <img src="public/images/compressor_performance.png" class="img-fluid" alt="assembler Image 1">
+            </div>
+        </div>
+        
+        <p></p>
+
+        <h3>Testing and Coding Practice</h3>
+
+        <p>A key strength of our extension was a rigorous test suite I wrote which helped catch niche bugs and greatly sped up development time. The test suite
+            featured a wide variety of assembly files (39 in total) which would be compressed and decompressed with their outputs checked for equality. We implemented multiple different
+            error types for failure and on success, output the compression percentage. Throughout our project, we also had structured debug prints which could all be turned
+            on/off from a single #define which we found useful when debugging a single test case. 
+        </p>
+
+        <div class="row">
+            <div class="col-md-12">
+                <img src="public/images/compressor_test_slide_1.png" class="img-fluid" alt="testing compressor Image 2">
+            </div>
+        </div>
+
+        <p></p>
+
+        <div class="row">
+            <div class="col-md-12">
+                <img src="public/images/compressor_test_slide_2.png" class="img-fluid" alt="testing compressor Image 2">
+            </div>
+        </div>
+
+        <p></p>
+
+        <p>
+            We maintained great coding practice throughout the project, with readable and commented code, as well as clear interfaces between tasks to facilitate
+            parallel development. Each function in our codebase is doxygen commented too, which gave us great documentation to share with our supervisor at the end of the project. We also had group code review sessions for merging and checkins.
+        </p>
+
+        <div class="row">
+            <div class="col-md-12">
+                <img src="public/images/compressor_doxygen.png" class="img-fluid" alt="testing compressor Image 2">
+            </div>
+        </div>
+
         <h2>The Emulator</h2>
 
         <p>
@@ -93,99 +211,6 @@
                 <img src="public/images/assembler_parser.png" class="img-fluid" alt="assembler Image 2">
             </div>
         </div>
-
-        <h2>Compressing Armv8 Assembly Files</h2>
-        
-        <p>
-            For our extension, we wrote a compressor/decompressor between armv8 assembly files and our own .acs (arm compressed source) files. After trying mutliple compression methods,
-            we landed on a templating approach, creating reusable templates in place of instructions. We did the initial programming as well as all the planning and algorithm design together as
-            a group.
-        </p>
-
-        <p>Specifically, I was responsible for:</p>
-
-        <ul>
-            <li>pair programming the whole decompressor</li>
-            <li>pair programming the first compressor step to sort assembly lines into a template groups hashmap</li>
-            <li>pair programming the decompressor output logic</li>
-            <li>solo programming the entire test suite and debug system</li>
-        </ul>
-
-        <p>
-            To determine the templates for a file, we populate an opcode group table hashmap that maps to arrays of instructions that will all belong to a single template category.
-            Categories are not simply the opcode but rather instructions we saw common operands between when doing experiments. For instance, load unconditional (ldrun) and movz instruction
-            with a shift are grouped together. We found being more specific than just opcode led to better results. 
-        </p>
-
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <img src="public/images/compressor_group_table.png" class="img-fluid" alt="assembler Image 1">
-            </div>
-        </div>
-
-
-        <p>
-            Once the categories have been determined, we perform a frequency analysis on each parameter in the instruction category, determining the most common value and "baking" this into
-            our template. We determined a threshold for the number of times a potential template will be used in a file to determine whether we create it or not in order to balance
-            the added file size from template metadata.
-        </p>
-
-        <div class="row">
-            <div class="col-md-6">
-                <img src="public/images/compressor_freq_analysis.png" class="img-fluid" alt="assembler Image 1">
-            </div>
-            <div class="col-md-6">
-                <img src="public/images/compressor_freq_analysis_template.png" class="img-fluid" alt="assembler Image 2">
-            </div>
-        </div>
-
-        <p>
-            Templates are then used to replace lines in the main file, with opcode being replaced with a smaller template id and operand values taking an asterisk to indicate the template's
-            default value or other values to override the template operand. We also compress labels to a smaller string while still being lossless.  In the acs file below,
-            T7 indicates seven templatesa nd L5 indicates five label name replacements.
-        </p>
-
-        <div class="row">
-            <div class="col-md-6">
-                <img src="public/images/compressor_template_usage.png" class="img-fluid" alt="assembler Image 1">
-            </div>
-            <div class="col-md-6">
-                <img src="public/images/compressor_acs_file.png" class="img-fluid" alt="assembler Image 2">
-            </div>
-        </div>
-
-
-        <h3>Results and Improvements</h3>
-
-        <p>We saw some great compression on many files in our test suite, with a peak compression of 48%. We found that even files with fewer repeating operands had great
-            compression from the label and template group id substitutions alone. However to improve compression further, we would look at templating whole blocks of repeated structures.
-            We would also compress whole assembly projects by determining templates on a subset of project files and using these for all files (like "training data").
-        </p>
-
-        <div class="row">
-            <div class="col-md-12">
-                <img src="public/images/compressor_performance.png" class="img-fluid" alt="assembler Image 1">
-            </div>
-        </div>
-
-        <h3>Testing and Coding Practice</h3>
-
-        <p>A key strength of our extension was a rigorous test suite I wrote which helped catch niche bugs and greatly sped up development time. The test suite
-            featured a wide variety of assembly files (39 in total) which would be compressed and decompressed with their outputs checked for equality. We implemented multiple different
-            error types for failure and on success, output the compression percentage. Throughout our project, we also had structured debug prints which could all be turned
-            on/off from a single #define which we found useful when debugging a single test case. 
-        </p>
-
-        <div class="row">
-            <div class="col-md-6">
-                <img src="public/images/compressor_test_slide_1.png" class="img-fluid" alt="assembler Image 1">
-            </div>
-            <div class="col-md-6">
-                <img src="public/images/compressor_test_slide_2.png" class="img-fluid" alt="assembler Image 2">
-            </div>
-        </div>
-
-        <p></p>
 
     <!-- adding js -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
