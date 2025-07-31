@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/Portfolio/public/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Sahil Karanth</title>
+</head>
+<body>
+    
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand white" href="#">Sahil Karanth</a>
+    <button
+      class="navbar-toggler bg-light"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link white" href="/Portfolio"
+            >Home<span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link white" href="CV.html">CV</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+    <div class="container">
+    
+        <h1>
+            Macropad Firmware
+            <img src="public/images/computer-keyboard-wired-color-icon.png" alt="plant" style="width: 50px; height: 50px; margin-left: 10px; margin-bottom: 10px;">
+        </h1>
+
+        <p>
+            In this project, I wrote custom firmware for a macropad using the QMK framework in C. WRITE MORE
+        </p>
+        
+        <p>
+            User Features:
+        </p>
+        
+        <ul>
+            <li>Cycling through mutliple macro layers (home, programming, git, markdown, network speed, music player)</li>
+            <li>Testing internet speed from a dedicated layer</li>
+            <li>Spotify media player from a dedicated layer</li>
+            <li>View RAM and CPU usage along with laptop battery</li>
+            <li>Dedicated arrow key layer that can be jumped to from any other layer</li>
+            <li>RGB syncing with a keyboard</li>
+        </ul>
+        
+        <p>
+            Technical Features:
+        </p>
+        
+        <ul>
+            <li>C code using the QMK framework</li>
+            <li>Client python daemon on the computer</li>
+            <li>raw HID USB protocol</li>
+            <li>LIFO queueing to service requests from the macropad to the client PC</li>
+            <li>Multithreading for background macropad tasks (like network tests) and interrupts</li>
+            <li>An interrupt system to prioritise RGB syncing with the keyboard</li>
+        </ul>
+        
+        <a href="https://github.com/Sahil-Karanth/PlantAppv3" target="_blank" rel="noopener noreferrer">
+            <button type="button" class="btn btn-link">View on GitHub</button>
+        </a>
+
+        <h2>Product Images</h2>
+
+        <div class="row">
+            <div class="col-md-3">
+                <img src="public/images/home_macropad_layer.jpeg" class="img-fluid" alt="Macropad Image 1">
+            </div>
+            <div class="col-md-3">
+                <img src="public/images/programming_macropad_layer.jpeg" class="img-fluid" alt="Macropad Image 2">
+            </div>
+            <div class="col-md-3">
+                <img src="public/images/git_macropad_layer.jpeg" class="img-fluid" alt="Macropad Image 3">
+            </div>
+            <div class="col-md-3">
+                <img src="public/images/markdown_macropad_layer.jpeg" class="img-fluid" alt="Macropad Image 4">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <img src="public/images/internet_testing_macropad_layer.jpeg" class="img-fluid" alt="Macropad Image 5">
+            </div>
+            <div class="col-md-3">
+                <img src="public/images/internet_results_macropad_layer.jpeg" class="img-fluid" alt="Macropad Image 6">
+            </div>
+            <div class="col-md-3">
+                <img src="public/images/arrow_macropad_layer.jpeg" class="img-fluid" alt="Macropad Image 7">
+            </div>
+            <div class="col-md-3">
+                <img src="public/images/media_player_macropad_layer.jpeg" class="img-fluid" alt="Macropad Image 8">
+            </div>
+        </div>
+
+        <h2>Electronics Setup</h2>
+
+        <p>
+            The Raspberry Pi was connected to a relay board (since the water valve needs 12V which is too high for the Pi to supply by itself). The relay and valve are connected to a 12V power supply via a screw terminal. A camera module was also connected to the Pi to take photos of the water bucket.
+        </p>
+
+        <div class="row">
+            <div class="d-flex justify-content-center mt-2" style="width:50%; margin: 0 auto;">
+                <img src="public/images/electronics_setup_img.jpeg" class="img-fluid fridge_img" alt="plantapp1">
+            </div>
+        </div>
+
+        <h2>App Screenshots</h2>
+
+        <div class="row">
+            <div class="col-md-3">
+                <img src="public/images/home.jpeg" class="img-fluid fridge_img" alt="plantapp1">
+            </div>
+            <div class="col-md-3">
+                <img src="public/images/start_timed_img.jpeg" class="img-fluid fridge_img" alt="plantapp2">
+            </div>
+            <div class="col-md-3">
+                <img src="public/images/rpi_app_img.jpeg" class="img-fluid fridge_img" alt="plantapp3">
+            </div>
+            <div class="col-md-3">
+                <img src="public/images/settings_img.jpeg" class="img-fluid fridge_img" alt="plantapp3">
+            </div>
+            
+        </div>
+
+        <h2>Equipment Links:</h2>
+
+        <ul>
+            <li>
+                <a href="https://www.amazon.co.uk/Raspberry-Pi-SC1111-5-4GB/dp/B0CK3L9WD3/ref=sr_1_3?crid=C3QLE8OQSS5U&dib=eyJ2IjoiMSJ9.iG3C_RhTcYByh-vruugjztBz_V6TygJ04onefX3P8Do5TZw-BgvxqvxA1wfr0K2T3WZGxFXzEMPUpOICd032WK8JLh6DoJp5l6X2k_0T5-YXaHmODGg82OF54CSvkJtbgikMX5aDHcP74G3jx3rFCZpkX0dwg_5rWq2X30v9XrpwLrazETZANUaKTdRdDWC380316wD7NC1pt9ePk8xavSzUGos3gsUKAYb1ab0f7j4.4n1mKkMfT00mfMScmuIpfwWsCqgNBWBb7QV8yzNA6cw&dib_tag=se&keywords=raspberry+pi+5&qid=1725562363&s=computers&sprefix=raspberry+pi+5+%2Ccomputers%2C125&sr=1-3" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-link" style="margin-bottom: 0;">Raspberry Pi 5</button>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.amazon.co.uk/gp/aw/d/B07PZC9ZMM/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=d5ae5576e64c3ea741ceeeff7ba19b9e&hsa_cr_id=5298762600702&qid=1725562389&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&ref_=sbx_be_s_sparkle_lsi4d_asin_0_img&pd_rd_w=83Z7M&content-id=amzn1.sym.25f7c301-a223-4ff8-91c9-accfeab9fda8%3Aamzn1.sym.25f7c301-a223-4ff8-91c9-accfeab9fda8&pf_rd_p=25f7c301-a223-4ff8-91c9-accfeab9fda8&pf_rd_r=KM9AAHR9PR1MRGN8NZ80&pd_rd_wg=VLHy7&pd_rd_r=9faae5b8-0375-4b7d-9e34-437336502436" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-link" style="margin-bottom: 0;">Relay Board</button>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.amazon.co.uk/TAILONZ-PNEUMATIC-Electric-Solenoid-2W025-08/dp/B0C5ZQZ9KL/ref=sr_1_9?dib=eyJ2IjoiMSJ9.92UBBS7fx8oR45k1mrH6f5fnDnGKIWmR83zpeJNe7D9EOYyylGE0JHVZG5ufCOv-zXR7bCw4wISx99i4Xmh8JeRRk-bwvpOh9MGosdesdX1EyRvacu51jTaxLVWOo6PANRxA8suHzcQwQUU8tzknm_059Eg3-I9U5aCLoSC2thJ0a9oocwqBt7y4sybvd4jTZfllFbhrHUBQn5Qn3qstzQIWqTM9u56SOEgvEtWJO9E2EIdMmPdN83D8OMRlYyJg1rZ0D6cwlbekAnBCc6gq4gWTBALNZbffLZLhsFy9H7Q.zES9aADYYnU0c9zC4anizl1YCesyYpYIyPz-l9jbSvs&dib_tag=se&keywords=solenoid+water+valve+12V&qid=1725562438&s=industrial&sr=1-9" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-link" style="margin-bottom: 0;">12V Solenoid Water Valve</button>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.amazon.co.uk/Freenove-Camera-Raspberry-Adjustable-Holder/dp/B08Q34FKFY/ref=sr_1_4?dib=eyJ2IjoiMSJ9.Q6UnzcxO3d_pp1goBP2BbUizeiELqJFBuGrwv6DccCD1su5so0doScKUIvLi1iheEPUFkywkdzRrHvp2zcezz6hDfAEw4h7egYGHS1I8RzCiQ43JroEKOQhL_MjrxmL_kjKfogRNI6tlUxn-3C065QuloUN6tLuztap-r_oYu1oUmhWGZlTqWJoywHt1QqH9vzlX1v0ux0vfsckmQWviufIWf9bh_WcIzpunpa6l9Ow.QaAlwzMq89uf0W-E4JKWAC2eOUF05pWx2ZxONGHIARQ&dib_tag=se&keywords=raspberry+pi+5+camera&qid=1725562487&sr=8-4" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-link" style="margin-bottom: 0;">Camera Module</button>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.amazon.co.uk/Supply-Adapter-100-240V-Transformer-Connector/dp/B09NBTBLH4/ref=sr_1_12?crid=3F1Q1UXM92384&dib=eyJ2IjoiMSJ9.OsIWhlxm24AP_tPs8VgIelnXGxCH4X7jZQccjyEyoLphHr2A1Qvt0F-ZNdJz0VtR0CoFG6YJHdjf8qlricZyQSTbqzEiRHhxX5mTICX44RVgEmJihrciLQIXhLx2Rpka9xViC6WUYHZvvbKdy2pnkV-MU5NBnvaQAkCX1azE7MOokpVgdJNX51z7Ud601fPfTkIHlYPECOZIYbKyD6qKt8A.g5rACt-ny2pYfVPMpzVfr_pFcbh_M5zPX4lO379dP28&dib_tag=se&keywords=12v+power+supply+jack&qid=1725562582&sprefix=12v+power+supply+jack%2Caps%2C244&sr=8-12" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-link" style="margin-bottom: 0;">12V Power Supply with Screw Terminal</button>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.amazon.co.uk/Browin-Fermentation-Bucket-White-15/dp/B07S1BHLTP/ref=sr_1_7?crid=3W1RRP7FP8KLD&dib=eyJ2IjoiMSJ9.nam2AcLq_J_Si2B6kNHvwSKz09eyF-QQ5b7kLTlpHCnoGRdXgMu8eNsJ4WlI62_6A_JNkpufXRZJb85aFH7MgDV7bflNpZ-3otjFZiG8BZEtSFHIdAaapsU0BiLhqiauSBrTZ6_NzEYpIzrqZxqznuoxa91r9XdswT0Xsa1xawaopM5yADh9bSC0wYxsjnhuBKAnzG6EWPfUmCagPwM9atcCDzuFofu9Q5-H2wp2dtFuleEin6WIYy0piLz9uzLg_iMcJcB_DGWzU_ZnkV94VRpAiaeQSEeiCWOhQnkSj0M.DMMEcDZCWpXjWRjWjJy-Z6pw0_kA2mKGuKcsxJaJTJk&dib_tag=se&keywords=bucket+with+tap&qid=1725562643&sprefix=bkcet+with+tap%2Caps%2C134&sr=8-7" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-link" style="margin-bottom: 0;">Bucket with Tap</button>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.amazon.co.uk/ERGAOBOY-Black-Polyurethane-Hose-Connector/dp/B097H5PFX6/ref=sr_1_1_sspa?crid=1AW78WVVBR3UY&dib=eyJ2IjoiMSJ9.uJJ9b2pf5l-6EKN0SB-Zl-M0CerzBYqQ_jUsxmmdCrYcsvVKY8ijF0cZTYURJ7y1J0VJXrRHe12C12Z0KRUn2FQcujYSZEkXkT_mJa1yvPgWI3qSwBINnQvf1isc8uYl3jdsQUKRa1lrjy-MPbCvFasJ-XbHjM9V3LI7O7YNgiEOeS2holLkHbVy_34urPr5Mk4CZF5u0pTZG2jOc_5Vd9AJ2PLIyC1h3ofR7Fw3PtQo55SOR4X-0IXYzLqwXYEwAI7aA7V17mWs4ONlemHUfQu_0heXqx__fiHTp79jYrs.l7gBMzxl34hFncrVTAy3C-GGnoOlWkLk9MKzMoDgqBI&dib_tag=se&keywords=pneumatic%2Btubing%2B8mm&qid=1725562676&sprefix=pneumatic%2Btubing%2B8mm%2Caps%2C136&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-link" style="margin-bottom: 0;">Pneumatic Tubing</button>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.amazon.co.uk/Waveshare-Compatible-Raspberry-Aluminium-Heatsink/dp/B0CQYGHL9D/ref=sxin_15_pa_sp_search_thematic_sspa?content-id=amzn1.sym.6906c541-6eee-4c10-bc19-17299b9d5015%3Aamzn1.sym.6906c541-6eee-4c10-bc19-17299b9d5015&crid=6SEL0KL346LG&cv_ct_cx=raspberry+pi+cooler&dib=eyJ2IjoiMSJ9.wTfDBVGorpyvMl_8f2bEKVeFJMvtqR7j2uoA1iKUKcYPFzaskOC80k98XIDYTSi-vxehBVebFL0GQADRFrXatw.WbfrR0W8ZavUqLuUtZ-zNoV8TLB8yxQZ7UJ0NzVtdp4&dib_tag=se&keywords=raspberry+pi+cooler&pd_rd_i=B0CQYGHL9D&pd_rd_r=0f754520-43af-462b-964f-497f8203ed14&pd_rd_w=yGubV&pd_rd_wg=a1OI6&pf_rd_p=6906c541-6eee-4c10-bc19-17299b9d5015&pf_rd_r=V0KFZ88S6HMX5QS2MF10&qid=1725562709&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=raspberry+pi+cool%2Caps%2C133&sr=1-3-ad3222ed-9545-4dc8-8dd8-6b2cb5278509-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&psc=1" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-link" style="margin-bottom: 0;">Active Cooler</button>
+                </a>
+            </li>
+        </ul>
+
+
+        <p>Other Equipment:</p>
+        <ul>
+            <li>Jumper cables (female-to-male and male-to-male)</li>
+            <li>Micro SD card</li>
+            <li>USB C power supply (you probably have one lying around)</li>
+            <li>Raspberry Pi 5 Case (optional)</li>
+            <li>Teflon tape</li>
+        </ul>
+
+    </div>
+
+
+    <!-- adding js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
