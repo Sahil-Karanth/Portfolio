@@ -123,7 +123,7 @@
 
         <p>
             Data required from the computer is received by raw HID over USB. I used an enum to tag the first byte of each request and such requests are enqueued to a request queue on the macropad during matrix scanning
-            (where keypresses are checked in the firmware). The queue is serviced at regular intervals and is also capped to avoid memory leaks. 
+            (where keypresses are checked in the firmware). The queue is serviced at regular intervals (but interrupted for fast rgb syncign) and is also capped to avoid memory leaks. 
         </p>
 
 
