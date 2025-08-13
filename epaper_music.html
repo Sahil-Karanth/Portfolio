@@ -40,12 +40,108 @@
     <div class="container">
     
         <h1>
-            E-Paper Music Device
+            Epaper Music Device
             <img src="public/images/play-button-green-icon.png" alt="plant" style="width: 50px; height: 50px; margin-left: 10px; margin-bottom: 10px;">
         </h1>
 
-        <p>Project done, will write soon :)</p>
+        <p>
+            In this project, I built an e-paper music device powered by an ESP32 to show new music releases passively on your desk. The devices (built one for
+            my brother too) receive data to write either via mDNS (for home wifi connections) or firebase (as a cloud middleman) for when the device is off the home network. WiFi networks can be setup from
+            a config page, where the ESP32 becomes WAP. These WiFi credentials are stored securely in flash memory, which is also used to cache old screen writes to there's always content to show I also wrote a flask web app that lets you search for aritsts and select them. Both the flask server and
+            python script that sends data to the ESP32s run on a raspberry pi zero 2w that acts as a central server to service both devices.
+            While firebase is optionally used for communication, the central server uses a sqlite database to store the selected artists and other metadata.
+            
+        </p>
+        <p>
+            I designed the device with power optimisation in mind, so it is in deep sleep for most of the day with set GPIO pin wake up triggers and mDNS/firebase
+            awake windows. This is so the device can last for long periods on a lithium ion battery. This project uses the spotify API to gather find new releases and find artists for the flask server.
+        
+        </p>
+        
+        
+        <a href="https://github.com/Sahil-Karanth/PlantAppv3" target="_blank" rel="noopener noreferrer">
+            <button type="button" class="btn btn-link">View on GitHub</button>
+        </a>
 
+        <div class="row">
+            <div class="col-md-12">
+                <img src="public/images/e-paper-songs.jpeg" class="img-fluid" alt="testing compressor Image 2">
+            </div>
+        </div>
+
+        <p></p>
+
+        <p>
+            User Features:
+        </p>
+        
+        <ul>
+            <li>Selecting artists from an easy to use web app</li>
+            <li>Discovering new music releases passively</li>
+            <li>Setting up WiFi to work both in and out of the home network</li>
+            <li>Wireless device that can work with a Li-ion battery or USB-C</li>
+        </ul>
+        
+        <p>
+            Technical Features:
+        </p>
+        
+        <ul>
+            <li>ESP32 Arduino</li>
+            <li>mDNS networking</li>
+            <li>Firebase</li>
+            <li>SQL</li>
+        </ul>
+
+
+        <h2>Setting Up WiFi</h2>
+        <p>The following video shows the device entering config mode.</p>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div style="text-align: center;">
+                    <video width="100%" style="max-width: 600px; height: auto;" controls>
+                        <source src="public/videos/e-paper-enter-config.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="row">
+              <div class="col-md-12">
+                  <img src="public/images/e-paper-wifi-config.png" class="img-fluid" alt="testing compressor Image 2">
+              </div>
+            </div>
+
+        </div>
+
+        
+        <h2>Selecting Artists</h2>
+        <p>The following video shows the device entering config mode.</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <img src="public/images/artist-select-1.png" class="img-fluid" alt="assembler Image 1">
+            </div>
+            <div class="col-md-6">
+                <img src="public/images/artist-select-2.png" class="img-fluid" alt="assembler Image 2">
+            </div>
+        </div>
+
+        <h2>Case CAD Model</h2>
+        <p>I also designed a case to house the device and a battery which I plan to 3D print in future.</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <img src="public/images/eink-cad-one.png" class="img-fluid" alt="assembler Image 1">
+            </div>
+            <div class="col-md-6">
+                <img src="public/images/eink-cad-2.png" class="img-fluid" alt="assembler Image 2">
+            </div>
+        </div>
+        
     </div>
 
 
