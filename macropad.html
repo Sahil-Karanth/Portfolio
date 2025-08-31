@@ -48,21 +48,23 @@
             In this project, I wrote custom firmware for a macropad using the QMK framework in C.
             
             The project includes 4 main macro layers with more traditional macros such as opening vscode, writing a doxygen comment
-            skeleton and automatically prepping a git commit ready for a message. These layers also have CPU, RAM and battery data streamed from the computer There are also two special utility layers for testing internet speed and a media player which get their data from the computer via a daemon python script.
+            skeleton and automatically prepping a git commit ready for a message. These layers also have CPU, RAM and battery data <b>streamed from the computer</b>. There are also three special utility layers for <b>testing internet speed </b>, a <b>media player</b>, and a <b>pomodoro timer</b> which get their data from the computer via a daemon python script.
 
             The media layer includes pause/play and song skipping as well as showing the currently playing song via the spotify API. The internet layer runs its test when requested in the background via threads so is non-blocking.
             
             I also included a dedicated arrow key layer because my macropad is a set of arrow keys which can be jumped to from any layer via a combo key.
 
-            RGB indicating the current layer is also synced with my keyboard for a cool lighting effect.
+            There is also RGB keyboard syncing with the macropad for a cool lighting effect.
         </p>
+
+        <p>Thanks to <a href="https://www.youtube.com/channel/UC4OQ5CQw8kuucCM8mG8woOQ" target="_blank">Leon Anavi</a> for the open source hardware!</p>
         
         
-        <a href="https://github.com/Sahil-Karanth/PlantAppv3" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/Sahil-Karanth/MacropadFirmware" target="_blank" rel="noopener noreferrer">
             <button type="button" class="btn btn-link">View on GitHub</button>
         </a>
 
-        <p>Below are images of each layer.</p>
+        <p>Below are images of some of the layers.</p>
 
         <div class="row">
             <div class="col-md-3">
@@ -102,6 +104,7 @@
             <li>Cycling through mutliple macro layers (home, programming, git, markdown, network speed, music player)</li>
             <li>Testing internet speed from a dedicated layer</li>
             <li>Spotify media player from a dedicated layer</li>
+            <li>Pomodoro timer that runs in the background</li>
             <li>View RAM and CPU usage along with laptop battery</li>
             <li>Dedicated arrow key layer that can be jumped to from any other layer</li>
             <li>RGB syncing with a keyboard</li>
@@ -127,6 +130,20 @@
         </p>
 
 
+        <h2>Keyboard RGB Syncing</h2>
+        <p>This video demonstrates the RGB syncing between the macropad and keyboard via the python daemon and my interrupt system.</p>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div style="text-align: center;">
+                    <video width="100%" style="max-width: 600px; height: auto;" controls>
+                        <source src="public/videos/layer_cycle_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
         <h2>Data Streaming Demo</h2>
         <p>This video demonstrates the layers which involve data streamed from the computer over raw HID. The black bar on the oled screen only shows on video, not in reality.</p>
 
@@ -141,14 +158,29 @@
             </div>
         </div>
 
-        <h2>Keyboard RGB Syncing</h2>
-        <p>This video demonstrates the RGB syncing between the macropad and keyboard via the python daemon and my interrupt system.</p>
+        <h2>Media Player Demo</h2>
+        <p>This video shows the media player working with media controls and displaying the current song.</p>
 
         <div class="row">
             <div class="col-md-12">
                 <div style="text-align: center;">
                     <video width="100%" style="max-width: 600px; height: auto;" controls>
-                        <source src="public/videos/layer_cycle_video.mp4" type="video/mp4">
+                        <source src="public/videos/media_player_test.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+
+        <h2>Pomodoro and Internet Tester Demo</h2>
+        <p>This video shows the pomodoro timer operating, with updates in the background and the time up RGB blinking</p>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div style="text-align: center;">
+                    <video width="100%" style="max-width: 600px; height: auto;" controls>
+                        <source src="public/videos/pomodoro_and_internet_test.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
