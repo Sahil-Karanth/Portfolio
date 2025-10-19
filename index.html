@@ -13,6 +13,16 @@
         background-color: #ffe4b5; /* Light orange */
         transition: box-shadow 0.3s ease;
         position: relative;
+        height: 300px;
+      }
+
+      .card-title {
+        display: -webkit-box;
+        line-clamp: 2;
+        -webkit-line-clamp: 2; /* elipse truncate */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 3em; /* adjust to match roughly 2 lines for your font-size */
       }
 
       /* Hover effect to make the card pop */
@@ -231,7 +241,7 @@
               style="height: 200px; object-fit: contain;"
             />
             <div class="card-body">
-              <h5 class="card-title">2024 - Light Simulation</h5>
+              <h5 class="card-title">2024 - Light Simulation<br> </h5>
             </div>
             <!-- Hover content -->
             <div class="hover-content">
