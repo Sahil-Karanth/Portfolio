@@ -3,120 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/Portfolio/public/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
     <link href="public/css/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <style>
-      .navbar-brand, .nav-link {
-        color: white !important;
-      }
-      .astro-entry {
-        margin-bottom: 50px;
-      }
-      .astro-img {
-        width: 100%;
-        max-height: 750px;
-        object-fit: contain;
-        background-color: #05070f;
-        border: 1px solid #222;
-      }
-    </style>
+    <link href="public/css/astro.css" rel="stylesheet" type="text/css">
     <title>Sahil Karanth - Astrophotography</title>
 </head>
-<body>
+<body class="night">
 
-    <!-- Navigation Header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-      <a class="navbar-brand white" href="#">Sahil Karanth</a>
-      <button
-        class="navbar-toggler bg-light"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link white" href="/Portfolio">Home</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link white" href="astrophotography.html"
-              >Astrophotography<span class="sr-only">(current)</span></a
-            >
-          </li>
-        </ul>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/Portfolio">Sahil Karanth</a>
+        <nav class="site-nav">
+          <a href="/Portfolio">Home</a>
+          <a href="astrophotography.html" aria-current="page">Astrophotography</a>
+        </nav>
       </div>
-    </nav>
+    </header>
 
-    <div class="container">
-  <h1>Astrophotography</h1>
+    <main>
 
-  <p class="lead">
-    All photos shot from my garden (Bortle 4.5 sky). I stack and process in
-    Siril and GraXpert.
-  </p>
+      <section class="astro-hero wrap-wide">
+        <div class="astro-hero-text">
+          <h1>Astrophotography</h1>
+          <p class="lead">
+            All photos shot from my garden (Bortle 4.5 sky). I stack and process in
+            Siril and GraXpert.
+          </p>
+        </div>
 
-  <h2 class="h5">Main Gear</h2>
-  <ul>
-    <li>William Optics Redcat 51 WIFD</li>
-    <li>ZWO AM3N</li>
-    <li>ZWO ASI 585MC AIR</li>
-    <li>Optolong L-Extreme Dual Band Narrowband Filter</li>
-    <li>ZWO TC40 Tripod</li>
-  </ul>
+        <div class="gear">
+          <h2>Main Gear</h2>
+          <ul>
+            <li>William Optics Redcat 51 WIFD</li>
+            <li>ZWO AM3N</li>
+            <li>ZWO ASI 585MC AIR</li>
+            <li>Optolong L-Extreme Dual Band Narrowband Filter</li>
+            <li>ZWO TC40 Tripod</li>
+          </ul>
+        </div>
+      </section>
 
-  <section class="astro-entry">
-    <h2>Soul Nebula (IC 1848)</h2>
-    <p class="text-muted">
-      <b>Date:</b> November 2026 &nbsp;|&nbsp;
-      <b>Exposure:</b> 24 frames stacked, 5 mins each &nbsp;|&nbsp;
-      <b>Calibration:</b> 20 darks, 30 flats, 30 dark flats
-    </p>
+      <!-- ======================== ENTRY ======================== -->
+      <article class="astro-entry wrap-wide">
+        <a class="astro-frame" href="public/images/soul_nebula.png" data-full="public/images/soul_nebula.png">
+          <img
+            src="public/images/soul_nebula_web.jpg"
+            width="2400" height="1411"
+            alt="Soul Nebula (IC 1848)"
+            loading="lazy"
+          />
+        </a>
+        <div class="astro-caption">
+          <h2>Soul Nebula <span class="catalogue">IC 1848</span></h2>
+          <dl class="astro-meta">
+            <div><dt>Date</dt><dd>November 2026</dd></div>
+            <div><dt>Exposure</dt><dd>24 frames stacked, 5 mins each</dd></div>
+            <div><dt>Calibration</dt><dd>20 darks, 30 flats, 30 dark flats</dd></div>
+          </dl>
+        </div>
+      </article>
 
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <img
-          src="public/images/soul_nebula.png"
-          class="img-fluid rounded astro-img"
-          alt="Soul Nebula (IC 1848)"
-        />
-      </div>
+      <!-- ======================== ENTRY ======================== -->
+      <article class="astro-entry wrap-wide">
+        <a class="astro-frame" href="public/images/eastern_veil_actual_final.png" data-full="public/images/eastern_veil_actual_final.png">
+          <img
+            src="public/images/eastern_veil_actual_final_web.jpg"
+            width="2400" height="1352"
+            alt="Eastern Veil Nebula (NGC 6992)"
+            loading="lazy"
+          />
+        </a>
+        <div class="astro-caption">
+          <h2>Eastern Veil Nebula <span class="catalogue">NGC 6992</span></h2>
+          <dl class="astro-meta">
+            <div><dt>Date</dt><dd>October 2026</dd></div>
+            <div><dt>Exposure</dt><dd>17 frames stacked, 5 mins each</dd></div>
+            <div><dt>Calibration</dt><dd>20 darks, 30 flats, 30 biases</dd></div>
+          </dl>
+        </div>
+      </article>
+      <!-- ======================== END OF ENTRIES ======================== -->
+
+    </main>
+
+    <div class="lightbox" hidden>
+      <img alt="">
     </div>
-  </section>
 
-  <section class="astro-entry">
-    <h2>Eastern Veil Nebula (NGC 6992)</h2>
-    <p class="text-muted">
-      <b>Date:</b> October 2026 &nbsp;|&nbsp;
-      <b>Exposure:</b> 17 frames stacked, 5 mins each &nbsp;|&nbsp;
-      <b>Calibration:</b> 20 darks, 30 flats, 30 biases
-    </p>
+    <script>
+      (function () {
+        var box = document.querySelector('.lightbox');
+        var img = box.querySelector('img');
 
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <img
-          src="public/images/eastern_veil_actual_final.png"
-          class="img-fluid rounded astro-img"
-          alt="Eastern Veil Nebula (NGC 6992)"
-        />
-      </div>
-    </div>
-  </section>
+        function close() {
+          box.classList.remove('is-open');
+          document.body.style.overflow = '';
+          setTimeout(function () { box.hidden = true; img.removeAttribute('src'); }, 250);
+        }
 
-</div>
+        document.querySelectorAll('.astro-frame').forEach(function (frame) {
+          frame.addEventListener('click', function (e) {
+            if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+            e.preventDefault();
+            var preview = frame.querySelector('img');
+            img.src = preview.currentSrc || preview.src;
+            img.alt = preview.alt;
+            box.hidden = false;
+            document.body.style.overflow = 'hidden';
+            requestAnimationFrame(function () { box.classList.add('is-open'); });
 
-      <!-- ======================== END OF ENTRY ======================== -->
+            // Swap in the full resolution file once it has downloaded
+            var full = new Image();
+            full.onload = function () { if (!box.hidden) img.src = full.src; };
+            full.src = frame.getAttribute('data-full');
+          });
+        });
 
-
-    <!-- Bootstrap JS Dependencies -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        box.addEventListener('click', close);
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && !box.hidden) close();
+        });
+      })();
+    </script>
 
 </body>
 </html>

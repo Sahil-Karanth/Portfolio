@@ -3,124 +3,36 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/Portfolio/public/css/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Sahil Karanth</title>
-</head>
-    <style>
-      /* Card styling with centered text and uniform color */
-      .card {
-        background-color: #ffe4b5; /* Light orange */
-        transition: box-shadow 0.3s ease;
-        position: relative;
-        height: 300px;
-      }
-
-      .card-title {
-        display: -webkit-box;
-        line-clamp: 2;
-        -webkit-line-clamp: 2; /* elipse truncate */
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        min-height: 3em; /* adjust to match roughly 2 lines for your font-size */
-      }
-
-      /* Hover effect to make the card pop */
-      .card:hover {
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow on hover */
-      }
-
-      .card-body {
-        text-align: center; /* Center the text in the card */
-      }
-
-      /* Wider buttons */
-      .card .btn {
-        width: 100%;
-      }
-
-      /* Padding for the images */
-      .card-img-top {
-        padding-top: 20px;
-      }
-
-      /* Fade effect for the card content */
-      .card .card-body, .card .card-img-top {
-        transition: opacity 0.2s ease; /* Fades the content */
-      }
-
-      .card:hover .card-body, .card:hover .card-img-top {
-        opacity: 0; /* Makes original content invisible */
-      }
-
-      .card .hover-content {
-        opacity: 0;
-        transition: opacity 0.5s ease;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
-
-      .card:hover .hover-content {
-        opacity: 1; /* Fade in new content */
-      }
-
-      .navbar-brand, .nav-link {
-        color: white !important;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet" type="text/css">
     <title>Sahil Karanth</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-      <a class="navbar-brand white" href="#">Sahil Karanth</a>
-      <button
-        class="navbar-toggler bg-light"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link white" href="/Portfolio"
-              >Home<span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link white" href="astrophotography.html"
-              >Astrophotography</a
-            >
-          </li>
-        </ul>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/Portfolio">Sahil Karanth</a>
+        <nav class="site-nav">
+          <a href="/Portfolio" aria-current="page">Home</a>
+          <a href="astrophotography.html">Astrophotography</a>
+        </nav>
       </div>
-    </nav>
+    </header>
 
-    <div class="container">
-      <h1>About Me</h1>
+    <main class="wrap">
 
-      <div class="row">
-        <div class="col-sm-4 d-flex align-items-center justify-content-center">
-          <img
-            src="public/images/PhotoOfMe.jpeg"
-            alt="Sahil Karanth"
-            style="width: 200px; height: auto; margin-left: 20px"
-          />
-        </div>
+      <div class="intro">
+        <img class="intro-photo" src="public/images/PhotoOfMe.jpeg" alt="Sahil Karanth">
+        <h1 class="intro-name">Sahil Karanth</h1>
+      </div>
 
-        <div class="col-sm-8">
-          <p></p>
-
+      <section class="cv-section">
+        <h2>About Me</h2>
+        <div class="cv-body">
           <p>
-            I am a 3rd year computing undergraduate at <b>Imperial College London</b>. From July-September 2026, 
-            I interned at <b>Netcraft</b> as a software engineer in the <b>Deep & Dark Web Discovery</b> team and will
+            I am a 3rd year computing undergraduate at <b>Imperial College London</b>. From July-September 2026,
+            I interned at <b>Netcraft</b> as a software engineer in the <b>Deep &amp; Dark Web Discovery</b> team and will
             be returning in 2027 for a 6 month placement.
           </p>
           <ul>
@@ -138,215 +50,166 @@
             <li>IT Governance (cybersecurity)</li>
           </ul>
 
-          <b>Languages:</b> C, Go, Python, Java, Kotlin, Scala, JavaScript, Haskell, SQL
+          <div class="facts">
+            <div class="fact">
+              <b>Languages:</b>
+              <span>C, Go, Python, Java, Kotlin, Scala, JavaScript, Haskell, SQL</span>
+            </div>
+            <div class="fact">
+              <b>Technologies:</b>
+              <span>AWS, OpenSearch, MariaDB, Kubernetes, Terraform, OpenAPI, REST, Prometheus, Grafana</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <p></p>
+      <section class="cv-section">
+        <h2>Projects</h2>
+        <div class="cv-body projects">
 
-          <b>Technologies:</b> AWS, OpenSearch, MariaDB, Kubernetes, Terraform, OpenAPI, REST, Prometheus, Grafana
+          <div class="project is-soon">
+            <span class="project-year">2026</span>
+            <span>
+              <span class="project-title">os9s</span>
+              <span class="project-desc">A k9s TUI for OpenSearch Cluster Management</span>
+            </span>
+            <span class="project-action">Coming Soon</span>
+          </div>
 
-          <p></p>
+          <div class="project is-soon">
+            <span class="project-year">2026</span>
+            <span>
+              <span class="project-title">Compiler from Scratch</span>
+              <span class="project-desc">Compiler for a imperative programming language with some advanced features</span>
+            </span>
+            <span class="project-action">Coming Soon</span>
+          </div>
+
+          <div class="project is-soon">
+            <span class="project-year">2025</span>
+            <span>
+              <span class="project-title">PintOS Operating System</span>
+              <span class="project-desc">Thread scheduling, user program management, and a virtual memory paging system</span>
+            </span>
+            <span class="project-action">Coming Soon</span>
+          </div>
+
+          <a class="project" href="epaper_music.html">
+            <span class="project-year">2025</span>
+            <span>
+              <span class="project-title">E-Paper Music Device</span>
+              <span class="project-desc">E-paper device showing select artists new releases</span>
+            </span>
+            <span class="project-action">View Project<span class="arrow">&rarr;</span></span>
+          </a>
+
+          <a class="project" href="macropad.html">
+            <span class="project-year">2025</span>
+            <span>
+              <span class="project-title">Macropad Firmware</span>
+              <span class="project-desc">Feature rich macropad with custom firmware and client script</span>
+            </span>
+            <span class="project-action">View Project<span class="arrow">&rarr;</span></span>
+          </a>
+
+          <a class="project" href="armv8.html">
+            <span class="project-year">2025</span>
+            <span>
+              <span class="project-title">Armv8 Compression</span>
+              <span class="project-desc">A custom compression algorithm for assembly files</span>
+            </span>
+            <span class="project-action">View Project<span class="arrow">&rarr;</span></span>
+          </a>
+
+          <a class="project" href="peer2peer.html">
+            <span class="project-year">2025</span>
+            <span>
+              <span class="project-title">Decentralised Database</span>
+              <span class="project-desc">Fault tolerant distributed database</span>
+            </span>
+            <span class="project-action">View Project<span class="arrow">&rarr;</span></span>
+          </a>
+
+          <a class="project" href="raycast.html">
+            <span class="project-year">2024</span>
+            <span>
+              <span class="project-title">Light Simulation</span>
+              <span class="project-desc">Reflection and refraction in custom shapes</span>
+            </span>
+            <span class="project-action">View Project<span class="arrow">&rarr;</span></span>
+          </a>
+
+          <a class="project" href="plant.html">
+            <span class="project-year">2024</span>
+            <span>
+              <span class="project-title">Plant Watering</span>
+              <span class="project-desc">Controlling a plant watering system from a mobile app</span>
+            </span>
+            <span class="project-action">View Project<span class="arrow">&rarr;</span></span>
+          </a>
+
+          <a class="project" href="fridge.html">
+            <span class="project-year">2024</span>
+            <span>
+              <span class="project-title">Fridge App</span>
+              <span class="project-desc">Managing a fridge with a suite of user features</span>
+            </span>
+            <span class="project-action">View Project<span class="arrow">&rarr;</span></span>
+          </a>
+
+          <a class="project" href="surakarta.html">
+            <span class="project-year">2023/4</span>
+            <span>
+              <span class="project-title">Surakarta</span>
+              <span class="project-desc">Implementing a complex ancient board game</span>
+            </span>
+            <span class="project-action">View Project<span class="arrow">&rarr;</span></span>
+          </a>
+
+          <a class="project" href="lstm.html">
+            <span class="project-year">2022/3</span>
+            <span>
+              <span class="project-title">Basketball Prediction</span>
+              <span class="project-desc">Predicting mid-game substitutions with ML</span>
+            </span>
+            <span class="project-action">View Project<span class="arrow">&rarr;</span></span>
+          </a>
+
+          <a class="project" href="email.html">
+            <span class="project-year">2022</span>
+            <span>
+              <span class="project-title">School Emailing</span>
+              <span class="project-desc">Sending absence request emails from a web app</span>
+            </span>
+            <span class="project-action">View Project<span class="arrow">&rarr;</span></span>
+          </a>
+
+          <a class="project" href="mini_projects.html">
+            <span class="project-year"></span>
+            <span>
+              <span class="project-title">Miscellaneous</span>
+              <span class="project-desc">Group of miscellaneous projects</span>
+            </span>
+            <span class="project-action">View Project<span class="arrow">&rarr;</span></span>
+          </a>
 
         </div>
-      </div>
+      </section>
 
+      <section class="cv-section">
+        <h2>Links</h2>
+        <div class="cv-body link-list">
+          <p>
+            Github:
+            <a href="https://github.com/Sahil-Karanth" target="_blank" rel="noopener noreferrer">https://github.com/Sahil-Karanth</a>
+          </p>
+          <p>
+            LinkedIn:
+            <a href="https://linkedin.com/in/sahil-karanth-625445327" target="_blank" rel="noopener noreferrer">https://linkedin.com/in/sahil-karanth-625445327</a>
+          </p>
+        </div>
+      </section>
 
-      <h1>Projects</h1>
-
-<div class="row justify-content-center">
-
-  <div class="col-md-4">
-    <div class="card mb-4 position-relative">
-      <img src="public/images/cmd-terminal-icon.png" class="card-img-top" alt="New Project Coming Soon" style="height: 200px; object-fit: contain;" />
-      <div class="card-body"><h5 class="card-title">2026 - os9s</h5></div>
-      <div class="hover-content">
-        <h5>A k9s TUI for OpenSearch Cluster Management</h5>
-        <p></p>
-        <a href="#" class="btn btn-primary disabled">Coming Soon</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 position-relative">
-      <img src="public/images/bin-file-icon.png" class="card-img-top" alt="Coming Soon" style="height: 200px; object-fit: contain;" />
-      <div class="card-body"><h5 class="card-title">2026 - Compiler from Scratch</h5></div>
-      <div class="hover-content">
-        <h5>Compiler for a imperative programming language with some advanced features</h5>
-        <p></p>
-        <a href="#" class="btn btn-primary disabled">Coming Soon</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 position-relative">
-      <img src="public/images/computer-desktop-repair-icon.png" class="card-img-top" alt="Coming Soon" style="height: 200px; object-fit: contain;" />
-      <div class="card-body"><h5 class="card-title">2025 - PintOS Operating System</h5></div>
-      <div class="hover-content">
-        <h5>Thread scheduling, user program management, and a virtual memory paging system</h5>
-        <p></p>
-        <a href="#" class="btn btn-primary disabled">Coming Soon</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 position-relative">
-      <img src="public/images/play-button-green-icon.png" class="card-img-top" alt="E-Paper New Music Device" style="height: 200px; object-fit: contain;" />
-      <div class="card-body"><h5 class="card-title">2025 - E-Paper Music Device</h5></div>
-      <div class="hover-content">
-        <h5>E-paper device showing select artists new releases</h5>
-        <p></p>
-        <a href="epaper_music.html" class="btn btn-primary">View Project</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 position-relative">
-      <img src="public/images/computer-keyboard-wired-color-icon.png" class="card-img-top" alt="2025 - Macropad Firmware" style="height: 200px; object-fit: contain;" />
-      <div class="card-body"><h5 class="card-title">2025 - Macropad Firmware</h5></div>
-      <div class="hover-content">
-        <h5>Feature rich macropad with custom firmware and client script</h5>
-        <p></p>
-        <a href="macropad.html" class="btn btn-primary">View Project</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 position-relative">
-      <img src="public/images/archive-file-icon.png" class="card-img-top" alt="2025 - Armv8 Compression Algorithm" style="height: 200px; object-fit: contain;" />
-      <div class="card-body"><h5 class="card-title">2025 - Armv8 Compression</h5></div>
-      <div class="hover-content">
-        <h5>A custom compression algorithm for assembly files</h5>
-        <p></p>
-        <a href="armv8.html" class="btn btn-primary">View Project</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 position-relative">
-      <img src="public/images/distribute-icon.png" class="card-img-top" alt="Distributed Database" style="height: 200px; object-fit: contain;" />
-      <div class="card-body"><h5 class="card-title">2025 - Decentralised Database</h5></div>
-      <div class="hover-content">
-        <h5>Fault tolerant distributed database</h5>
-        <p></p>
-        <a href="peer2peer.html" class="btn btn-primary">View Project</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 position-relative">
-      <img src="public/images/light-bulb-color-icon.png" class="card-img-top" alt="Light Simulation" style="height: 200px; object-fit: contain;" />
-      <div class="card-body"><h5 class="card-title">2024 - Light Simulation</h5></div>
-      <div class="hover-content">
-        <h5>Reflection and refraction in custom shapes</h5>
-        <p></p>
-        <a href="raycast.html" class="btn btn-primary">View Project</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 position-relative">
-      <img src="public/images/green-leaf-icon.png" class="card-img-top" alt="Plant Watering Project" style="height: 200px; object-fit: contain;" />
-      <div class="card-body"><h5 class="card-title">2024 - Plant Watering</h5></div>
-      <div class="hover-content">
-        <h5>Controlling a plant watering system from a mobile app</h5>
-        <p></p>
-        <a href="plant.html" class="btn btn-primary">View Project</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 position-relative">
-      <img src="public/images/fridge_icon.png" class="card-img-top" alt="Fridge App" style="height: 200px; object-fit: contain;" />
-      <div class="card-body"><h5 class="card-title">2024 - Fridge App</h5></div>
-      <div class="hover-content">
-        <h5>Managing a fridge with a suite of user features</h5>
-        <p></p>
-        <a href="fridge.html" class="btn btn-primary">View Project</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 position-relative">
-      <img src="public/images/red-circle-icon.png" class="card-img-top" alt="Surakarta Project" style="height: 200px; object-fit: contain;" />
-      <div class="card-body"><h5 class="card-title">2023/4 - Surakarta</h5></div>
-      <div class="hover-content">
-        <h5>Implementing a complex ancient board game</h5>
-        <p></p>
-        <a href="surakarta.html" class="btn btn-primary">View Project</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 position-relative">
-      <img src="public/images/ball-basketball-icon.png" class="card-img-top" alt="Basketball Project" style="height: 200px; object-fit: contain;" />
-      <div class="card-body"><h5 class="card-title">2022/3 - Basketball Prediction</h5></div>
-      <div class="hover-content">
-        <h5>Predicting mid-game substitutions with ML</h5>
-        <p></p>
-        <a href="lstm.html" class="btn btn-primary">View Project</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 position-relative">
-      <img src="public/images/email-verification-icon.png" class="card-img-top" alt="Email Project" style="height: 200px; object-fit: contain;" />
-      <div class="card-body"><h5 class="card-title">2022 - School Emailing</h5></div>
-      <div class="hover-content">
-        <h5>Sending absence request emails from a web app</h5>
-        <p></p>
-        <a href="email.html" class="btn btn-primary">View Project</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 position-relative">
-      <img src="public/images/brackets-coding-icon.png" class="card-img-top" alt="Miscellaneous" style="height: 200px; object-fit: contain;" />
-      <div class="card-body"><h5 class="card-title">Miscellaneous</h5></div>
-      <div class="hover-content">
-        <h5>Group of miscellaneous projects</h5>
-        <p></p>
-        <a href="mini_projects.html" class="btn btn-primary">View Project</a>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-      <h1>Links</h1>
-
-      <p>
-        Github:
-        <a href="https://github.com/Sahil-Karanth" class="btn btn-link"
-          >https://github.com/Sahil-Karanth</a
-        >
-      </p>
-
-      <p>
-        LinkedIn:
-        <a
-          href="https://linkedin.com/in/sahil-karanth-625445327"
-          class="btn btn-link"
-          >https://linkedin.com/in/sahil-karanth-625445327</a
-        >
-      </p>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    </main>
   </body>
 </html>
